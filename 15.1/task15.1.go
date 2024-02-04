@@ -15,7 +15,7 @@ func createHugeString(size int) string {
 func someFunc() {
 	v := createHugeString(1 << 10)       // создает строку размером 1024 байта
 	justString = string([]byte(v[:100])) // преобразует первые 100 байтов строки v в новую строку
-	fmt.Println(justString)
+	fmt.Println(len(justString))         // выводит длину новой строки
 }
 func main() {
 	someFunc()
